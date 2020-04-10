@@ -1,7 +1,10 @@
 # Table of contents
 
 * [AZ CLI Talk](README.md)
-* [Outline](outline.md)
+
+## Concepts
+
+* [Outline](concepts/outline.md)
 
 ## Demos <a id="demos-1"></a>
 
