@@ -15,6 +15,7 @@ description: Azure CLI Talk Outline
 * Installation
   * Cross platform
   * IMO: For Windows, Use Chocolatey 🤩 
+    * `choco install azcli`
 * Where does AZCLI tool fit into your DevOps toolbox?
 * Why AZCLI and AZ PowerShell are better together
   * Features unique to AZCLI
@@ -42,9 +43,10 @@ description: Azure CLI Talk Outline
   * [https://devblogs.microsoft.com/devops/using-azure-devops-from-the-command-line/](https://devblogs.microsoft.com/devops/using-azure-devops-from-the-command-line/)
   * [https://docs.microsoft.com/en-us/cli/azure/](https://docs.microsoft.com/en-us/cli/azure/)
   * [https://jmespath.org/](https://jmespath.org/)
+  * [https://github.com/bbtsoftware/AzureDevOpsPolicyConfigurator](https://github.com/bbtsoftware/AzureDevOpsPolicyConfigurator)
 * CHALLENGE
   * This looks too hard I don't want to learn it
     * Doing hard things makes later tasks easier
-  * How would I even start
+  * How would I even start?
     * Code walk through a task or an az command or extension
 

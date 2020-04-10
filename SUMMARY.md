@@ -1,13 +1,13 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [AZ CLI Talk](README.md)
 * [Outline](outline.md)
 
 ## Getting Started
 
-* [Untitled](getting-started/untitled.md)
 * [Demos](demos.md)
 * [az interactive](az-interactive.md)
-* [AZCLI JMESPath Examples](azcli-jmespath-examples.md)
+* [USING --query,  JMESPath Examples](azcli-jmespath-examples.md)
 * [azure-devops Extension Examples](azure-devops-extension-examples.md)
+* [Code Walk AZ SQL](code-walk-az-sql.md)
 
