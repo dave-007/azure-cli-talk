@@ -6,23 +6,28 @@ description: Azure CLI Talk Outline
 
 * Intro
 * Goals of This Talk
-  * Gentle introduction to Azure CLI
+  * Introduction to Azure CLI
   * Code Walk thru demos
   * **Community Code Walk Challenge**
 * What is AZCLI
   * Disambiguate OS,terminal,shell,console, executable, module
 * Installation
   * Cross platform
-  * IMO: For Windows, Use Chocolatey 🤩 
-    * `choco install azcli`
+    * IMO: For Windows, Use Chocolatey 🤩 
+      * `choco install azcli`
+  * Included in Azure Cloud Shell
 * Where does AZCLI tool fit into your DevOps toolbox?
   * Bash shell versus PowerShell with AZCLI
   * AZ PowerShell and AZ CLI is not an either/or, it's an AND choice
 * Why AZCLI and AZ PowerShell are better together
   * Features unique to AZCLI
     * Talk about teams behind PS and CLI modules
-      * AZ ACI BUILD
-      * AZ EXTENSION...
+      * Separate cadences, separate functionality
+      * Examples
+        * AZ ACI BUILD
+        * AZ EXTENSION...
+* DEMOS
+* az basics
 * az interactive
 * Handling JSON output
   * JMESPath / the 'bash' way
