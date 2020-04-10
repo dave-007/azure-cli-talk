@@ -3,11 +3,13 @@
 * [AZ CLI Talk](README.md)
 * [Outline](outline.md)
 
-## Getting Started
+## Demos <a id="demos-1"></a>
 
-* [Demos](demos.md)
+* [az basics](az-basics.md)
 * [az interactive](az-interactive.md)
-* [USING --query,  JMESPath Examples](azcli-jmespath-examples.md)
-* [azure-devops Extension Examples](azure-devops-extension-examples.md)
+* [Using --query,  JMESPath Examples](azcli-jmespath-examples.md)
+* [Using azure-devops Extension](azure-devops-extension-examples.md)
 * [Code Walk AZ SQL](code-walk-az-sql.md)
+
+## Challenge
 

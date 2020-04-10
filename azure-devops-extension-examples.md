@@ -4,7 +4,7 @@ description: >-
   https://docs.microsoft.com/en-us/cli/azure/ext/azure-devops/?view=azure-cli-latest
 ---
 
-# azure-devops Extension Examples
+# Using azure-devops Extension
 
 {% code title="extension-add-azure-devops.ps1" %}
 ```text
