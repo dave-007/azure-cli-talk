@@ -13,7 +13,7 @@ description: Azure CLI Talk Outline
   * Disambiguate OS,terminal,shell,console, executable, module
 * Installation
   * Cross platform
-    * IMO: For Windows, Use Chocolatey 🤩 
+    * IMO: For Windows, Use Chocolatey 🤩
       * `choco install azcli`
   * Included in Azure Cloud Shell
 * Where does AZCLI tool fit into your DevOps toolbox?
@@ -26,6 +26,11 @@ description: Azure CLI Talk Outline
       * Examples
         * AZ ACI BUILD
         * AZ EXTENSION...
+* Development process of the AZCLI
+  * ...
+  * Command Modules
+    * Move from *-preview to part of CLI (See extensions)
+      * Example PY code showing KeyVault change from preview to part of CLI [link] (https://github.com/Azure/azure-cli/blob/8adf97355a605d147afc26f6c1b6f6afb6651c2f/src/azure-cli/azure/cli/command_modules/keyvault/__init__.py)
 * DEMOS
 * az basics
 * az interactive
