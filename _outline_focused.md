@@ -1,0 +1,50 @@
+Azure Command Line Interface (CLI)
+CloudSkills Community 1 hour talk
+April 29, 2020
+
+- Intro
+- Goals of This Talk
+  - Big Picture
+    - Azure CLI is an interface onto Azure REST API
+      - [Azure REST API Reference](https://docs.microsoft.com/en-us/rest/api/azure/)
+      - API Extends with Azure's growth, Azure CLI and Azure PowerShell module follow
+        - [Frequent Releases](https://docs.microsoft.com/en-us/cli/azure/release-notes-azure-cli?toc=%2Fcli%2Fazure%2Ftoc.json&bc=%2Fcli%2Fazure%2Fbreadcrumb%2Ftoc.json&view=azure-cli-latest)
+    - Azure CLI's place in Azure Toolbox
+      - Use your choice of shell
+        - On your workstation (bash/pwsh/msdos/?)
+        - On Azure Cloud Shell (bash/pwsh)
+      - Use your choice of host
+        - Your workstation
+        - AZDO Task or Agent
+        - Docker
+          - `docker run -it mcr.microsoft.com/azure-cli`
+        - jumpbox with SSH
+      - Alongside PowerShell
+        - shell, language and AZ module
+  - AZCLI Basics
+    - Installation options
+    - Learning tools
+      - az (see az base commands)
+      - -h
+      - az interactive
+      - az find
+    - Querying with JMESPath
+      - try [JPTerm](https://github.com/jmespath/jmespath.terminal)
+  - AZCLI Diving Deeper
+    - Modules
+    - Extensions
+      -  Python 'Wheels'
+      -  [Available Extensions](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-list?view=azure-cli-latest)
+  -  AZCLI for DevOps
+     -  Works against [DevOps REST API](https://docs.microsoft.com/en-us/rest/api/?view=Azure%20DevOps)
+  -  Hints and tools for learning
+     -  Let's do CodeWalks
+  - DEMOS
+    - az login
+    - az rest
+    - az graph
+- Not Goals if This Talk
+  - AZCLI Identity Management
+    - service principals
+    - machine identities
+    - 
