@@ -11,6 +11,7 @@ description: Azure CLI Talk Outline
   * **Community Code Walk Challenge**
 * What is AZCLI
   * Disambiguate OS,terminal,shell,console, executable, module
+  * Another layer to work against Azure API [6 year old blog post](https://docs.microsoft.com/en-us/archive/blogs/mast/learning-azure-service-management-rest-api-through-powershell-and-azure-cli-tools)
 * Installation
   * Cross platform
     * IMO: For Windows, Use Chocolatey 🤩 
@@ -41,12 +42,14 @@ description: Azure CLI Talk Outline
 * Using AZCLI DevOps extension
   * Demo
 * Azure DevOps CLI Task
+* Azure Pipelines [Demo on Docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline-cli?view=azure-devops&tabs=browser)
 * References
   * [https://docs.microsoft.com/en-us/cli/azure/popular-articles-using-the-azure-cli?](https://docs.microsoft.com/en-us/cli/azure/popular-articles-using-the-azure-cli?)
   * [https://devblogs.microsoft.com/devops/using-azure-devops-from-the-command-line/](https://devblogs.microsoft.com/devops/using-azure-devops-from-the-command-line/)
   * [https://docs.microsoft.com/en-us/cli/azure/](https://docs.microsoft.com/en-us/cli/azure/)
   * [https://jmespath.org/](https://jmespath.org/)
   * [https://github.com/bbtsoftware/AzureDevOpsPolicyConfigurator](https://github.com/bbtsoftware/AzureDevOpsPolicyConfigurator)
+  * [https://docs.microsoft.com/en-us/archive/blogs/mast/learning-azure-service-management-rest-api-through-powershell-and-azure-cli-tools](https://docs.microsoft.com/en-us/archive/blogs/mast/learning-azure-service-management-rest-api-through-powershell-and-azure-cli-tools)
 * CHALLENGE
   * This looks too hard I don't want to learn it
     * Doing hard things makes later tasks easier
