@@ -64,3 +64,4 @@ $result = az pipelines run -p $myProjectName --name $myProjectName | ConvertFrom
 $result
 
 
+## CLEANUP
