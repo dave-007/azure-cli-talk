@@ -1,5 +1,81 @@
-<#
-* Reference
-  * [https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-databases-manage\#azure-cli-manage-sql-database-servers-and-single-databases](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-single-databases-manage#azure-cli-manage-sql-database-servers-and-single-databases)
+# AZ DEVOPS CODE WALK
+# Refer : https://docs.microsoft.com/en-us/azure/devops/cli/log-in-via-pat?view=azure-devops&tabs=windows
+# Shell is pwsh
 
+## REQUIREMENTS: resource group
+
+## INSTALL azure-devops extension
+
+## DEFINE VARIABLES
+$myRGName = 'demosql2'
+$myLocation = 'eastus2'
+$mySQLName = 'demo-ss'
+$myDBName = 'demo'
+$mySQLCred = Get-Credential -Message "SQL Admin"
+# set default location and resource group for azcli session
+az configure -h
+az configure -l
+az configure --defaults location=$myLocation
+# review your config file to see where your defaults are stored
+cat ~\\.azure\\config
+
+# CREATE RESOURCE GROUP
+az group create -n $myRGName --tags Env=Dev #-l $myLocation
+az group show -n $myRGName | ConvertFrom-JSON | Select-Object location
+# make the group the default
+az configure --defaults group=$myRGName
+az configure -l
+
+
+# review sql commands
+az sql -h
+az sql server create -h
+az sql server create -n $mySQLName -u $mySQLCred.Username -p ($mySQLCred.GetNetworkCredential().password) -i  --debug
+$sql = az sql server show -n $mySQLName | ConvertFrom-JSON
+$sql
+
+#test with sqlcmd, Chocolatey can install with 'choco install sqlserver-cmdlineutils'
+$sqlcmd = 'C:\Program Files\Microsoft SQL Server\110\Tools\Binn\SQLCMD.EXE'
+& "$sqlcmd" -S $sql.fullyQualifiedDomainName -Q 'SELECT @@VERSION' -U $mySQLCred.Username -P ($mySQLCred.GetNetworkCredential().password)
+# need to open firewall
+
+# get public ip
+$ipinfo = Invoke-RestMethod http://ipinfo.io/json 
+$ipinfo.ip 
+
+# add firewall rule
+az sql server firewall-rule create -s $mySQLName -n myrule --start-ip-address $ipinfo.ip  --end-ip-address $ipinfo.ip 
+
+# try again
+& "$sqlcmd" -S $sql.fullyQualifiedDomainName -Q 'SELECT @@VERSION' -U $mySQLCred.Username -P ($mySQLCred.GetNetworkCredential().password)
+
+# make the sql server the default
+az configure --defaults server=$mySQLName
+az configure -l
+
+# create database
+az sql db create -h
+az sql db create -n northwind --service-objective Basic --server $mySQLName --license-type LicenseIncluded --tags Env=Dev --verbose
+
+# import bacpac
+$uri = 'https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Standard.bacpac'
+# TODO copy from github to storage
+# refer https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-deploy-sql-extensions-bacpac
+az sql db import -h --storage-uri $uri
+
+# TODO populate without importing a bacpac
+<#
+$sqlScriptSourceURL = 'https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/databases/northwind-pubs/instnwnd.sql'
+$sqlScript = ((New-Object System.Net.WebClient).DownloadString($sqlScriptSourceURL))
+$sqlScript | Out-File "$env:temp\nw.sql"
+& "$sqlcmd" -S $sql.fullyQualifiedDomainName -i "$env:temp\nw.sql" -U $mySQLCred.Username -P ($mySQLCred.GetNetworkCredential().password) -o "$env:temp\nwresult.log"
+cat "$env:temp\nwresult.log"
+& "$sqlcmd" -S $sql.fullyQualifiedDomainName -Q "SELECT name from sys.tables" -U $mySQLCred.Username -P ($mySQLCred.GetNetworkCredential().password)
 #>
+
+
+## CLEANUP
+
+# empty configuration
+az configure -defaults '' #TODO for all
+az configure -l 
