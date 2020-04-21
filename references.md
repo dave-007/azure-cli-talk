@@ -1,6 +1,7 @@
 # Azure CLI Dev Team
 - [Azure CLI Projects on GitHub](https://github.com/Azure/azure-cli/projects)
 
+# Azure CLI Samples page [github repo](https://github.com/Azure-Samples/azure-cli-samples)
 
 # Azure CLI Project Details 
 - [Azure CLI PYPY project, release history] (https://pypi.org/project/azure-cli/)

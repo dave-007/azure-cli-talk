@@ -19,9 +19,11 @@
     - AZ-104 command list
       - Know how to do X in azcli
   - Know for azcli in DevOps
+    - az extension devops (demo)
+    - az cli task in azure devops, [Azure CLI task documentation] out of date, still refers to xplat cli(https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-cli?view=azure-devops)
   - Know the tools
     - JMESPath JTerm
     - AZBrowser
-    - 
+    - VSCode AZCLI Extension
   - Learn by doing with Code Walks
   - Share my demos as code walks, with prompts for the community to fork, extend and share back.
