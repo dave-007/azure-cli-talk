@@ -1,0 +1,4 @@
+- How do I invalidate/clear the accessToken
+- Demo with service principal 
+- Demo with machine identity
+- Demo AZCLI task
