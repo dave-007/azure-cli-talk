@@ -1,0 +1,8 @@
+# az feature
+
+# Refer 
+
+
+$f = az feature list | ConvertFrom-JSON
+
+$f | Out-GridView

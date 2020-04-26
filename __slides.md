@@ -11,67 +11,122 @@ Start writing!
 
 ## For CloudSkills Community
 
-### david@cobbinfotech.com
+### david@davidcobb.net
 <!-- todo: complete cit site --> 
-
+ 
 ---
 
-# Who's Dave?
+# Who's David?
 
 ## - Consultant & Technical Instructor
 
-## - Previously: web developer, accidental dba, intentional dba, system administrator, cloud engineer
+## - Previously: web developer, dba, system administrator, cloud engineer
 
-## - Microsoft Certified Trainer since 2002, focused on SQL, now on Azure
+## - Microsoft Certified Trainer since 2002, was focused on SQL, now focused on Azure
 
-## - Lots of certifications for Microsoft, Azure & AWS
+## - Lots of certifications for Microsoft, Azure & two for AWS
 
-## - Goal to have a level 1/10 knowledge of most of Azure, with areas 5-8/10.
-### - Leveraging Azure CLI and Azure PowerShell is key to grokking and working with these features.
+## - Generalist. My goal is baseline knowledge of most of Azure, with deeper study in a few areas of interest (SQL/Data/ML/AI).
+
 ---
 
 # Goals for this talk
 
-- Show how azcli is a **fundamental** tool to learn Azure and become an effective cloud builder
-- Equip you with tools to grasp and become effective with azcli quickly
-- Convince you to learn by coding azcli and sharing with the CS community via GitHub
+- Overview of Azure CLI **(Command Line Interface, aka azcli)** as part of your Azure toolbox. Installation options &  basic syntax
+
+- Share tools and techniques for Azure CLI that make it easier to learn and build in Azure.
+
+- Explore basic Azure CLI commands, including the fundamentals useful for AZ-104 (Storage, VMs, Networking)
+
+- Discover interesting preview Azure CLI commands and extensions 
+
+- Challenge you to learn Azure CLI by coding and sharing with the CS community via GitHub
 
 
 ---
+# Where can I run Azure CLI?
 
-# Overview
+## AZCLI is cross platform, runs in Windows, Linux, MacOS
 
-1. Basics: Introduction to Azure CLI Syntax
-2. Context: Where CLI fits in your cloud toolbox
-3. Tools: Use these to learn faster
-4. Challenge: Learn by doing. Code walks
-<!-- class: gaia-->
+## AZCLI works on your choice of shell (even CMD.exe)
 
+## David's shell of choice is PowerShell7 (pwsh)
 
-
----
-
-<!-- class: uncover invert-->
-
-# uncover + invert
 
 ---
 
 # Azure CLI Basics
 
+## Start with Azure API
+
+## Basic Syntax
+
+## First Commands
+
+## Get Interactive
+
+## Dealing with JSON
 ---
 
-## Azure CLI History
-
-- Formerly XPlat CLI (written in NodeJs)
-- Written in Python
+## Azure's API
 
 ---
 
-# Context
+## Basic Syntax & First Commands
+
+### Parameter syntax
+
+### -h
+
+### Common parameters
+- -o, --debug, ...
+
+---
+
+# Get Interactive
+
+## az interactive
+
+---
+
+## Dealing with JSON
+
+### --query & JMESPath
+
+### jpterm
+
+### Why not PowerShell?
+
+
+---
+
+## Discovering AZCLI Commands and Extensions
+
+---
+
+## Development Process of Azure CLI Commands
+
+-----> Extension (Development) 
+-------> Extension (Preview) 
+---------> Extension (Released)
+-----------> Command (Preview) 
+-------------> Command (Released)
+-->  [TIME]
+
+### [Azure CLI Extensions Project on github](https://github.com/Azure/azure-cli-extensions)
+
+### [Microsoft Azure CLI Dev Tools (azdev) Project on github](https://github.com/Azure/azure-cli-dev-tools)
+
+### [Azure Commands under development](https://github.com/Azure/azure-cli-extensions/tree/master/src)
+
+
+
+---
+
+# Dave's Take
 
 ## Key Points
-- Azure API is THE interface TO Azure, it improves as Azure improves.
+- Azure API is THE interface TO Azure
   - All cloud tools (Portal, shell, programming, PowerShell & CLI) work against that API
   - azcli is arguably the simplest interface to Azure API
 - azcli works on the OS and shell of your choice, including PowerShell
@@ -79,23 +134,13 @@ Start writing!
 
 ---
 
-## Azure's API
-
 ---
+# Q&A
 
-## Process of improvement of Azure CLI Commands
+### How does Azure CLI compare with Azure PowerShell?
 
-### Version history
+### What about ARM Templates, or IaC tools like Terraform or Pulumi?
 
-### Extension (Preview) -> Extension -> Command (Preview) -> Command
-
-```mermaid
-
-graph LR
-
-Extension (Preview) --> Extension --> Command (Preview) --> Command
-
-```
 
 ---
 
@@ -109,7 +154,9 @@ Extension (Preview) --> Extension --> Command (Preview) --> Command
 
 ---
 
-##
+## Compare AZCLI to AZ POWERSHELL
+
+### Azure PowerShell Modules Listing [docs](https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md)
 
 ---
 
@@ -118,15 +165,46 @@ Extension (Preview) --> Extension --> Command (Preview) --> Command
 ---
 
 
-# Tools
+# More AZCLI Tools
 
-1. -h
-2. az interactive
-3. az browse
-4. jpterm
-5. AZCLI VSCode Extension
+1. az browse
+2. 
+3. AZCLI VSCode Extension
+
+---
+# JSON & JMESPath References
+
+## [Azure Docs - Query Azure CLI command output](https://docs.microsoft.com/en-us/cli/azure/query-azure-cli)
+## [Neil Peterson blog post](https://techcommunity.microsoft.com/t5/itops-talk-blog/how-to-query-azure-resources-using-the-azure-cli/ba-p/360147)
 
 
 ---
 
 # Challenge
+
+---
+
+Extra stuff
+
+
+---
+
+---
+
+# Overview
+
+1. Basics: Introduction to Azure CLI Syntax
+2. Context: Where CLI fits in your cloud toolbox
+3. Tools: Use these to learn faster
+4. Challenge: Learn by doing. Code walks
+<!-- class: gaia-->
+
+---
+
+## Azure CLI History
+
+- Formerly XPlat CLI (written in NodeJs)
+- Rewritten in Python
+- Updated several times a year, see version history 
+
+---
