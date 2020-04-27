@@ -7,38 +7,45 @@ _class: invert
 
 Start writing!
 ---
+<!-- todo: complete cit site --> 
+
+---
+
 # Azure CLI Talk
 
 ## For CloudSkills Community
 
 ### david@davidcobb.net
-<!-- todo: complete cit site --> 
+
  
 ---
 
+---
+
+
 # Who's David?
 
-## - Consultant & Technical Instructor
+### - Consultant & Technical Instructor
 
-## - Previously: web developer, dba, system administrator, cloud engineer
+### - Previously: web developer, dba, system administrator, cloud engineer
 
-## - Microsoft Certified Trainer since 2002, was focused on SQL, now focused on Azure
+### - Microsoft Certified Trainer since 2002, was focused on SQL, now focused on Azure
 
-## - Lots of certifications for Microsoft, Azure & two for AWS
+### - Lots of certifications for Microsoft, Azure & two for AWS
 
-## - Generalist. My goal is baseline knowledge of most of Azure, with deeper study in a few areas of interest (SQL/Data/ML/AI).
+### - Generalist. My goal is baseline knowledge of most of Azure, with deeper study in a few areas of interest (SQL/Data/ML/AI).
 
 ---
 
 # Goals for this talk
 
-- Overview of Azure CLI **(Command Line Interface, aka azcli)** as part of your Azure toolbox. Installation options &  basic syntax
+- Overview of Azure CLI **(Command Line Interface, aka azcli)** as part of your Azure toolbox
 
-- Share tools and techniques for Azure CLI that make it easier to learn and build in Azure.
+- Share tools and techniques for Azure CLI that make it easier to learn and build in Azure
 
 - Explore basic Azure CLI commands, including the fundamentals useful for AZ-104 (Storage, VMs, Networking)
 
-- Discover interesting preview Azure CLI commands and extensions 
+- Discover interesting preview Azure CLI commands and extensions
 
 - Challenge you to learn Azure CLI by coding and sharing with the CS community via GitHub
 
@@ -106,19 +113,18 @@ Start writing!
 
 ## Development Process of Azure CLI Commands
 
+### The Azure CLI team shares their dev environment setup for interested developers who want to contribute.  [AZDEV project](https://github.com/Azure/azure-cli-dev-tools)
+
+### New functionality seems to go through these stages:
 -----> Extension (Development) 
--------> Extension (Preview) 
----------> Extension (Released)
------------> Command (Preview) 
--------------> Command (Released)
--->  [TIME]
+-------------------> Extension (Preview) 
+---------------------------------> Extension (Released)
+-----------------------------------------------> Command (Preview) 
+-------------------------------------------------------------> Command (Released)
+
+### Example: KeyVault code [link](https://github.com/Azure/azure-cli/blob/8adf97355a605d147afc26f6c1b6f6afb6651c2f/src/azure-cli/azure/cli/command_modules/keyvault/__init__.py)
 
 ### [Azure CLI Extensions Project on github](https://github.com/Azure/azure-cli-extensions)
-
-### [Microsoft Azure CLI Dev Tools (azdev) Project on github](https://github.com/Azure/azure-cli-dev-tools)
-
-### [Azure Commands under development](https://github.com/Azure/azure-cli-extensions/tree/master/src)
-
 
 
 ---
@@ -126,11 +132,11 @@ Start writing!
 # Dave's Take
 
 ## Key Points
-- Azure API is THE interface TO Azure
-  - All cloud tools (Portal, shell, programming, PowerShell & CLI) work against that API
-  - azcli is arguably the simplest interface to Azure API
-- azcli works on the OS and shell of your choice, including PowerShell
-- azcli useful from the PowerShell shell, and alongside AZ PowerShell Modules?
+- Azure API is THE interface to Azure, underlying all the cloud  tools (Portal, shell, programming, PowerShell & CLI) work against that API
+- Azure CLI works on the OS and shell of your choice, including PowerShell
+- Azure CLI is arguably the simplest interface to Azure API
+- Azure CLI is perhaps the best way to keep up with new Azure capabilities
+- **Let's learn and share what we learn as a community**
 
 ---
 
@@ -140,7 +146,6 @@ Start writing!
 ### How does Azure CLI compare with Azure PowerShell?
 
 ### What about ARM Templates, or IaC tools like Terraform or Pulumi?
-
 
 ---
 
