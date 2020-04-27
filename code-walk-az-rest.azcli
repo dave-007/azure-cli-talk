@@ -1,0 +1,10 @@
+# az rest
+
+# Refer https://duckduckgo.com/?q=az+cli+graph+query&atb=v206-1&ia=web
+
+az rest -h
+
+$rjson = az rest --method get --uri https://graph.microsoft.com/beta/auditLogs/directoryAudits
+$r = $rjson | ConvertFrom-JSON
+
+$r.value | Out-GridView 

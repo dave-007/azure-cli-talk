@@ -2,6 +2,9 @@
 description: Examples of using JMESPath in the `-query parameter
 ---
 
+refer: https://docs.microsoft.com/en-us/cli/azure/query-azure-cli
+
+
 # Using --query,  JMESPath Examples
 
 

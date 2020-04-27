@@ -1,0 +1,41 @@
+# az graph
+
+# Refer https://docs.microsoft.com/en-us/azure/governance/resource-graph/
+# https://duckduckgo.com/?q=az+cli+graph+query&atb=v206-1&ia=web
+
+# Azure Graph is accessible via rest calls
+az rest --method get --uri "https://graph.microsoft.com/v1.0/"
+$r = az rest --method get --uri "https://graph.microsoft.com/v1.0/" | ConvertFrom-JSON
+$r.value | Out-GridView
+
+#try one of the queries
+$d = az rest --method get --uri "https://graph.microsoft.com/v1.0/domains" | ConvertFrom-JSON
+$d.value | Out-GridView
+
+
+# az graph cli command is not installed by default
+az graph -h 
+
+
+# look thru the extensions
+$extensions = az extension list-available | ConvertFrom-JSON
+$extensions | Out-GridView 
+
+# az graph is part of the 'resource-graph' extension
+az extension add -n 'resource-graph'
+
+# view az graph commands
+az graph -h 
+
+
+az extension list -o table
+
+
+
+
+az graph query -q "project id, name, type, location, tags"
+
+
+# remove extension
+az extension -h
+az extension remove -n 'resource-graph'

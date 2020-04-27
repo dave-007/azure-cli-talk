@@ -11,6 +11,10 @@ description: >-
 ```ps
 az extension list-available -o table
 
+$extensions = az extension list-available | ConvertFrom-JSON
+$extensions | Out-GridView 
+
+
 ```
 
 ## extensions of interest
@@ -23,3 +27,7 @@ az extension list-available -o table
 
 
 ```
+$extensions = az extension list-available | ConvertFrom-JSON
+$extensions | Out-GridView 
+
+
