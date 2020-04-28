@@ -7,14 +7,21 @@ _class: invert
 
 Start writing!
 ---
+<!-- todo: complete cit site --> 
+
+---
+
 # Azure CLI Talk
 
 ## For CloudSkills Community
 
 ### david@davidcobb.net
-<!-- todo: complete cit site --> 
+
  
 ---
+
+---
+
 
 # Who's David?
 
@@ -163,15 +170,18 @@ code --install-extension ms-vscode.azurecli
 
 ## Development Process of Azure CLI Commands
 
+### The Azure CLI team shares their dev environment setup for interested developers who want to contribute.  [AZDEV project](https://github.com/Azure/azure-cli-dev-tools)
+
+### New functionality seems to go through these stages:
 -----> Extension (Development) 
-------------> Extension (Preview) 
------------------> Extension (Released)
------------------------> Command (Preview) 
-----------------------------> Command (Released)
+-------------------> Extension (Preview) 
+---------------------------------> Extension (Released)
+-----------------------------------------------> Command (Preview) 
+-------------------------------------------------------------> Command (Released)
 
+### Example: KeyVault code [link](https://github.com/Azure/azure-cli/blob/8adf97355a605d147afc26f6c1b6f6afb6651c2f/src/azure-cli/azure/cli/command_modules/keyvault/__init__.py)
 
-Example, [az keyvault command was previously an extension in preview](https://github.com/Azure/azure-cli/blob/8adf97355a605d147afc26f6c1b6f6afb6651c2f/src/azure-cli/azure/cli/command_modules/keyvault/__init__.py)
-
+### [Azure CLI Extensions Project on github](https://github.com/Azure/azure-cli-extensions)
 ---
 
 # Explore some Azure CLI commands and extensions
@@ -182,7 +192,6 @@ Example, [az keyvault command was previously an extension in preview](https://gi
 
 ## Code-Walk Challenge!
 ---
-
 # Q & A
 
 ---
@@ -190,10 +199,11 @@ Example, [az keyvault command was previously an extension in preview](https://gi
 # Dave's Take
 
 ## Key Points
-- Azure API is THE interface to Azure
-  - All cloud tools (Portal, Cloud Shell, SDKs, PowerShell & CLI) work against that API, but are developed at different paces by different teams. Each has their strengths. 
-  - **Azure CLI is arguably the simplest interface to Azure API to pick up and get productive quickly **
-- Azure CLI useful from the PowerShell shell, and alongside AZ PowerShell Modules
+- Azure API is THE interface to Azure, underlying all the cloud  tools (Portal, shell, programming, PowerShell & CLI) work against that API
+- Azure CLI works on the OS and shell of your choice, including PowerShell
+- Azure CLI is arguably the simplest interface to Azure API
+- Azure CLI is perhaps the best way to keep up with new Azure capabilities
+- **Let's learn and share what we learn as a community**
 
 ---
 
@@ -211,7 +221,6 @@ Questions,
 ### How does Azure CLI compare with Azure PowerShell?
 
 ### What about ARM Templates, or IaC tools like Terraform or Pulumi?
-
 
 ---
 
