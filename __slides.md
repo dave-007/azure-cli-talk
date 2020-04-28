@@ -7,24 +7,31 @@ _class: invert
 
 Start writing!
 ---
+<!-- todo: complete cit site --> 
+
+---
+
 # Azure CLI Talk
 
 ## For CloudSkills Community
 
 ### david@davidcobb.net
-<!-- todo: complete cit site --> 
+
  
 ---
 
+---
+
+
 # Who's David?
 
-## - Consultant & Technical Instructor
+### - Consultant & Technical Instructor
 
 ## - Career path: helpdesk, web developer, dba, system administrator, cloud engineer
 
 ## - Microsoft Certified Trainer since 2002, was focused on SQL, now focused on Azure. Certifications for Microsoft, Azure & two for AWS
 
-## - Generalist. My goal is baseline knowledge of most of Azure, with deeper study in a few areas of interest (SQL/Data/ML/AI).
+### - Generalist. My goal is baseline knowledge of most of Azure, with deeper study in a few areas of interest (SQL/Data/ML/AI).
 
 ---
 
@@ -36,7 +43,7 @@ Start writing!
 
 - Explore Azure CLI commands, beginning with the fundamentals useful for AZ-104 (Storage, VMs, Networking)
 
-- Discover other useful Azure CLI commands and extensions 
+- Discover interesting preview Azure CLI commands and extensions
 
 - Challenge you to learn Azure CLI by coding and sharing with the CS community via GitHub
 
@@ -190,10 +197,11 @@ Example, [az keyvault command was previously an extension in preview](https://gi
 # Dave's Take
 
 ## Key Points
-- Azure API is THE interface to Azure
-  - All cloud tools (Portal, Cloud Shell, SDKs, PowerShell & CLI) work against that API, but are developed at different paces by different teams. Each has their strengths. 
-  - **Azure CLI is arguably the simplest interface to Azure API to pick up and get productive quickly **
-- Azure CLI useful from the PowerShell shell, and alongside AZ PowerShell Modules
+- Azure API is THE interface to Azure, underlying all the cloud  tools (Portal, shell, programming, PowerShell & CLI) work against that API
+- Azure CLI works on the OS and shell of your choice, including PowerShell
+- Azure CLI is arguably the simplest interface to Azure API
+- Azure CLI is perhaps the best way to keep up with new Azure capabilities
+- **Let's learn and share what we learn as a community**
 
 ---
 
@@ -211,7 +219,6 @@ Questions,
 ### How does Azure CLI compare with Azure PowerShell?
 
 ### What about ARM Templates, or IaC tools like Terraform or Pulumi?
-
 
 ---
 

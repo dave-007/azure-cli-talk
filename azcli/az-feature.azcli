@@ -1,0 +1,9 @@
+# az feature - View preview features and register for access to them.
+
+# Refer 
+
+az feature -h
+
+$f = az feature list | ConvertFrom-JSON
+
+$f | Out-GridView

@@ -1,0 +1,29 @@
+# Azure-CLI, Up to Speed
+- Intro
+- Story - I investigated Azure-CLI, boiled down the most useful ways to learn, and the most useful ways to use it for DevOps
+  - pwsh guy, not a bash guy, this colors my opinions about the way to use Azure CLI, I use it the pwsh way.
+- Goals
+  - See Azure-CLI within the Big Picture of Azure
+    - New functionality added to Azure
+      - -> Azure API
+        - -> azcli & az powershell (-> az console / webui)
+          - azcli -> extensions/preview -> commands/modules (ex. keyvault)
+    - Use azcli from many places (examples) but each has its nuances (ex.Bash has tab complete, Cloud Shell certain gotchas)
+    - Learning Azure by learning azcli
+  - Intro to the useful ways to learn azcli
+    - az interactive!
+      - tutorial
+    - use your favorite shell (variables, json)
+    - use your favorite ide (vscode)
+  - Know azcli for certification
+    - AZ-104 command list
+      - Know how to do X in azcli
+  - Know for azcli in DevOps
+    - az extension devops (demo)
+    - az cli task in azure devops, [Azure CLI task documentation] out of date, still refers to xplat cli(https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-cli?view=azure-devops)
+  - Know the tools
+    - JMESPath JTerm
+    - AZBrowser
+    - VSCode AZCLI Extension
+  - Learn by doing with Code Walks
+  - Share my demos as code walks, with prompts for the community to fork, extend and share back.

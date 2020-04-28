@@ -1,5 +1,14 @@
-# Demos
+# Demos (Azure CLI Talk)
+az login
+az-config.azcli
+az-storage.azcli
 
+
+
+
+
+
+# Nice to haves to follow
 az deploy (arm with inline params)
 
 extensions

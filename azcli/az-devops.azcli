@@ -56,6 +56,13 @@ az devops project show -p $myProjectName
 az devops project create -h
 az devops project create --name az-cli-devops-demo --open
 
+# repos
+az repos -h
+az repos list -h
+az repos list -p $myProjectName
+
+
+
 # pipelines
 az pipelines -h
 az pipelines list --project $myProjectName -o table

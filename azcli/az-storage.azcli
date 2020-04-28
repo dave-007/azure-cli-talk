@@ -1,0 +1,59 @@
+## CODE WALK - AZ STORAGE
+## COMMANDS 
+### az storage
+
+## REFERENCES 
+### (documentation)
+### https://docs.microsoft.com/en-us/cli/azure/storage
+### quickstart https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli
+### Samples https://docs.microsoft.com/en-us/azure/storage/blobs/storage-samples-blobs-cli?toc=%2fazure%2fstorage%2fblobs%2ftoc.json
+### azcopy https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10
+### resource explorer
+
+
+## GOALS (what objectives does this script accomplish)
+### GOAL 1: Create a storage account, container and copy a file there
+
+## REQUIREMENTS (what prerequisites?)
+### Azure account
+### azcopy 
+### 
+
+## INSTALL (anything needed besides azcli, extensions, dependencies?)
+## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
+
+$myLocation = 'eastus2'  
+$myResourceGroup = 'azcli-test-rg' 
+#ALTERNATELY, location and group can be defaulted with az configure instead of setting them here
+az configure -l
+
+$myStorageAccountName = 'davestor123'
+$myContainerName = 'images'
+
+$mySubscriptionID = az account show --query "id" -o tsv
+az configure
+
+## STEPS (comment each section along the way)
+az storage -h
+az storage account -h
+az storage account list
+az storage account create -h
+az find "az storage account create"
+
+# what storage skus are available?
+#uri discovered in Azure Resource Explorer
+$uri = "https://management.azure.com/subscriptions/$mySubscriptionID/providers/Microsoft.Storage/skus?api-version=2017-10-01"
+$skusJSON = az rest --method get --uri $uri 
+$skus = $skusJSON | ConvertFrom-JSON
+$skus.Value | Out-GridView
+#filter
+$skus.Value | gm
+$skus.Value |
+  Select-Object tier,kind,name,locations |
+    Where-Object -Property locations -eq $myLocation | 
+      Sort-Object -Property tier,kind,name
+
+# choose my sku
+$mySKU = 'Standard_LRS'
+az storage account create --name $myStorageAccountName  --sku $mySKU # --resource-group MyResourceGroup --location $myLocation
+## CLEANUP
