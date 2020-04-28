@@ -9,6 +9,7 @@
 
 ## GOALS (what objectives does this script accomplish)
 ### GOAL 1: Testing out different types of JMESPath queries
+### GOAL 2: Testing in different shells
 
 ## REQUIREMENTS (what prerequisites?)
 Azure account
@@ -24,10 +25,11 @@ jpterm
 # query a single object
 az account show
 
-# get properties of that object
+# get properties of single object
 az account show --query '[environmentName, user.name]'
-# query an array
 
+
+# query an array
 # get 1 property from that array, brackets
 az group list --query '[].name'
 
@@ -45,9 +47,14 @@ az group list --query '[]'
 # note switch to double quotes outside query, single quotes inside
 az group list --query "[?location=='eastus2']"
 # should work, but doesn't, not sure why
+# doesn't work in pwsh/PowerShell, only works in bash
 az group list --query "[?contains(location,'eastus2')]"
+# works, only in bash?
+az account list-locations --query "[?contains(displayName,'US')] | \
+[].[displayName,name,id]"
 
-# test out with 
+az account list-locations --query "[?contains(displayName,'US')]"
+
 
 
 ## CLEANUP

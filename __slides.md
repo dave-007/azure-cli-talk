@@ -172,9 +172,10 @@ Start writing!
 
 # More AZCLI Tools
 
-1. az browse
-2. 
-3. AZCLI VSCode Extension
+- az browse
+- 
+- AZCLI VSCode Extension
+  - install vscode extension
 
 ---
 # JSON & JMESPath References

@@ -55,6 +55,7 @@ description: Azure CLI Talk Outline
   * VSCode
     * Extensions
       * ms-vscode.azurecli
+        * troubleshooting this extension, see the output window, select log (extension host)
   * AzBrowse
     * Installation
   
