@@ -1,6 +1,10 @@
 ## AZ CODE WALK - TITLE
 ## COMMANDS 
+<<<<<<< HEAD
 ### (what are primary azcli command subgroup used)
+=======
+### az ad sp create-for-rbac 
+>>>>>>> b4c149a200904f103168302172095372e586cb3c
 
 ## REFERENCES 
 ### (documentation)
@@ -14,6 +18,7 @@
 ## INSTALL (anything needed besides azcli, extensions, dependencies?)
 ## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
 ## STEPS (comment each section along the way)
+<<<<<<< HEAD
 $u = az ad signed-in-user show | ConvertFrom-JSON
 $u | Out-GridView
 
@@ -21,3 +26,19 @@ az ad signed-in-user list-owned-objects
 
 ## CLEANUP
 
+=======
+az account show
+
+
+$u = az ad signed-in-user show | ConvertFrom-JSON
+$u
+
+
+
+## CLEANUP
+
+## CODE WALK - TITLE
+## COMMANDS 
+### az ad sp create-for-rbac 
+
+>>>>>>> b4c149a200904f103168302172095372e586cb3c
