@@ -1,10 +1,10 @@
-## AZ CODE WALK - TITLE
+## CODE WALK - TITLE
 ## COMMANDS 
-### (what are primary azcli command subgroup used)
+### (what are the primary commands used?)
 
 ## REFERENCES 
 ### (documentation)
-### https://docs.microsoft.com/en-us/azure/devops/cli/log-in-via-pat?view=azure-devops&tabs=windows
+### https://docs.microsoft.com/en-us/azure/cli
 
 ## GOALS (what objectives does this script accomplish)
 ### GOAL 1: ...

@@ -1,0 +1,53 @@
+## CODE WALK - AZ QUERY JMESPATH EXAMPLES
+## COMMANDS 
+### -- query param
+
+## REFERENCES 
+### https://docs.microsoft.com/en-us/cli/azure/query-azure-cli
+### https://jmespath.org/examples.html
+### https://github.com/jmespath/jmespath.terminal
+
+## GOALS (what objectives does this script accomplish)
+### GOAL 1: Testing out different types of JMESPath queries
+
+## REQUIREMENTS (what prerequisites?)
+Azure account
+JMESPath-terminal 
+
+## INSTALL (anything needed besides azcli, extensions, dependencies?)
+jpterm
+
+## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
+## STEPS (comment each section along the way)
+
+
+# query a single object
+az account show
+
+# get properties of that object
+az account show --query '[environmentName, user.name]'
+# query an array
+
+# get 1 property from that array, brackets
+az group list --query '[].name'
+
+# get multiple properties from that array, use brackets and braces
+# this doesn't work, but it should
+az group list --query '[].{name, location}'
+# need to provide a label for each property in form label:property
+az group list --query '[].{NAME:name, locationLabelWhatever:location}'
+
+
+# filter an array
+# all fields unfiltered
+az group list --query '[]'
+# filter with ?contains
+# note switch to double quotes outside query, single quotes inside
+az group list --query "[?location=='eastus2']"
+# should work, but doesn't, not sure why
+az group list --query "[?contains(location,'eastus2')]"
+
+# test out with 
+
+
+## CLEANUP

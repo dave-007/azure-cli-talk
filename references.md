@@ -10,3 +10,6 @@
 # Azure CLI History
 - XPlat CLI (written in NodeJS)
 - ArmClient [blog post] (http://blog.davidebbo.com/2015/01/azure-resource-manager-client.html)
+
+# Azure CLI and REST API
+- https://stackoverflow.com/questions/49291889/does-the-azure-cli-use-the-azure-rest-api

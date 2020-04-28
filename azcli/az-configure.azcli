@@ -1,0 +1,38 @@
+## CODE WALK - AZ CONFIGURE
+## COMMANDS 
+### az configure
+
+## REFERENCES 
+### (documentation)
+### https://docs.microsoft.com/en-us/cli/azure/azure-cli-configuration
+### https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest
+
+## GOALS (what objectives does this script accomplish)
+### GOAL 1: observe and set az configure defaults to simplify scripting
+## TODO
+### understand the --scope parameter
+
+## REQUIREMENTS (what prerequisites?)
+Azure subscription
+## INSTALL (anything needed besides azcli, extensions, dependencies?)
+## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
+$myResourceGroup = 'az-cli-test-rg'
+$myLocation = 'eastus2'
+
+## STEPS (comment each section along the way)
+az configure -h
+# show current config settings
+az configure -l
+# set default location
+az configure -d "location=$myLocation"
+# set default resource group
+az configure -d "group=$myResourceGroup"
+# show new config settings
+az configure -l
+
+## CLEANUP
+
+# to clear all your configuration defaults, set them each to empty string
+az configure --defaults location='' group=''
+# show new (empty) config settings
+az configure -l
