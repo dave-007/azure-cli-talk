@@ -2,8 +2,7 @@
 # Refer : https://docs.microsoft.com/en-us/azure/devops/cli/log-in-via-pat?view=azure-devops&tabs=windows
 # Shell is pwsh
 
-## REQUIREMENTS: Create and copy your Personal Access Token (PAT) first via UI
-## refer https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page#frequently-asked-questions-faqs
+## REQUIREMENTS: Create and copy your Personal Access Token (PAT) first via UI, refer https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page#frequently-asked-questions-faqs
 
 ## INSTALL azure-devops extension
 az extension -h
@@ -56,6 +55,13 @@ az devops project show -p $myProjectName
 
 az devops project create -h
 az devops project create --name az-cli-devops-demo --open
+
+# repos
+az repos -h
+az repos list -h
+az repos list -p $myProjectName
+
+
 
 # pipelines
 az pipelines -h

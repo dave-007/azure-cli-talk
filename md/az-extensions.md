@@ -27,3 +27,7 @@ $extensions | Out-GridView
 
 
 ```
+$extensions = az extension list-available | ConvertFrom-JSON
+$extensions | Out-GridView 
+
+

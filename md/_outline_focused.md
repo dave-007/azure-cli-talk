@@ -39,8 +39,10 @@ April 29, 2020
      -  Works against [DevOps REST API](https://docs.microsoft.com/en-us/rest/api/?view=Azure%20DevOps)
   -  Hints and tools for learning
      -  Let's do CodeWalks
-  - DEMOS
+  - DEMOS (tbd)
     - az login
+    - az devops
+    - az sql
     - az rest
     - az graph
 - Not Goals if This Talk
