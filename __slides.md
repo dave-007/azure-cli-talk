@@ -27,11 +27,9 @@ Start writing!
 
 ### - Consultant & Technical Instructor
 
-### - Previously: web developer, dba, system administrator, cloud engineer
+## - Career path: helpdesk, web developer, dba, system administrator, cloud engineer
 
-### - Microsoft Certified Trainer since 2002, was focused on SQL, now focused on Azure
-
-### - Lots of certifications for Microsoft, Azure & two for AWS
+## - Microsoft Certified Trainer since 2002, was focused on SQL, now focused on Azure. Certifications for Microsoft, Azure & two for AWS
 
 ### - Generalist. My goal is baseline knowledge of most of Azure, with deeper study in a few areas of interest (SQL/Data/ML/AI).
 
@@ -39,11 +37,11 @@ Start writing!
 
 # Goals for this talk
 
-- Overview of Azure CLI **(Command Line Interface, aka azcli)** as part of your Azure toolbox
+- Getting started with of Azure CLI **(Command Line Interface, aka azcli)** as part of your Azure toolbox. 
 
-- Share tools and techniques for Azure CLI that make it easier to learn and build in Azure
+- Share tools and techniques in the shell with Azure CLI
 
-- Explore basic Azure CLI commands, including the fundamentals useful for AZ-104 (Storage, VMs, Networking)
+- Explore Azure CLI commands, beginning with the fundamentals useful for AZ-104 (Storage, VMs, Networking)
 
 - Discover interesting preview Azure CLI commands and extensions
 
@@ -51,13 +49,36 @@ Start writing!
 
 
 ---
-# Where can I run Azure CLI?
+# Installing & Running AZCLI
+## AZCLI ..
+###  Is written in Python, so it's cross platform, runs in Windows, Linux, MacOS
+### Is open source under MIT License
+### Has many ways to install ([docs](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest))
+### Works on your choice of shell bash, zsh, etc...even CMD.exe)
 
-## AZCLI is cross platform, runs in Windows, Linux, MacOS
+## David's shell of choice to run AZCLI is _PowerShell7 (pwsh)_
 
-## AZCLI works on your choice of shell (even CMD.exe)
+---
 
-## David's shell of choice is PowerShell7 (pwsh)
+# Shell Considerations
+
+## What's your shell?
+
+### It's a time investment to become proficient in a shell, this pays off in effectiveness with AZCLI or any other command line tool.
+
+### See [Tips for using Azure CLI effectively](https://github.com/Azure/azure-cli/blob/dev/doc/use_cli_effectively.md) for help with common challenges that arise with shell scripting using this tool.
+
+---
+
+# Using VSCode? You should be!
+
+## Check out the Azure CLI Tools extension
+
+```ps
+
+code --install-extension ms-vscode.azurecli
+
+```
 
 
 ---
@@ -75,19 +96,36 @@ Start writing!
 ## Dealing with JSON
 ---
 
-## Azure's API
+# Azure's API
+
+## Underlying control plane for all of Azure. 
+## Huge scope, changing rapidly. 
+- [Azure API docs](https://docs.microsoft.com/en-us/rest/api/azure/) 
+- [releases on github](https://github.com/Azure/azure-rest-api-specs/releases)
+
+## Azure CLI is updated frequently
+- [AZCLI release notes](https://docs.microsoft.com/en-us/cli/azure/release-notes-azure-cli)
+
+## Compare to Azure PowerShell's update frequency
+- [Azure PowerShell release notes](https://docs.microsoft.com/en-us/powershell/azure/release-notes-azureps)
 
 ---
 
-## Basic Syntax & First Commands
+# Demo Azure API
+
+---
+
+# Basic Syntax & First Commands
 
 ### Parameter syntax
 
-### -h
+-  -h
+-  ...
 
 ### Common parameters
 - -o, --debug, ...
-
+- ...
+### Demo
 ---
 
 # Get Interactive
@@ -96,36 +134,63 @@ Start writing!
 
 ---
 
-## Dealing with JSON
+# Dealing with JSON
 
-### --query & JMESPath
+## --query & JMESPath
 
-### jpterm
+## jpterm
 
-### Why not PowerShell?
+## Why not PowerShell? :)
+
+
+---
+
+# Demo AZCLI, JSON & PowerShell
+
+---
+
+# Discovering AZCLI Commands and Extensions
+
+---
+# Azure CLI Open Source Projects in GitHub
+
+## [Azure CLI](https://github.com/Azure/azure-cli)
+## [Azure CLI Extensions](https://github.com/Azure/azure-cli-extensions)
+
+- [Azure Commands under development](https://github.com/Azure/azure-cli-extensions/tree/master/src)
+
+
+## [Microsoft Azure CLI Dev Tools (azdev) ](https://github.com/Azure/azure-cli-dev-tools)
+
 
 
 ---
 
-## Discovering AZCLI Commands and Extensions
 
----
 
 ## Development Process of Azure CLI Commands
 
-### The Azure CLI team shares their dev environment setup for interested developers who want to contribute.  [AZDEV project](https://github.com/Azure/azure-cli-dev-tools)
-
-### New functionality seems to go through these stages:
 -----> Extension (Development) 
--------------------> Extension (Preview) 
----------------------------------> Extension (Released)
------------------------------------------------> Command (Preview) 
--------------------------------------------------------------> Command (Released)
+------------> Extension (Preview) 
+-----------------> Extension (Released)
+-----------------------> Command (Preview) 
+----------------------------> Command (Released)
 
-### Example: KeyVault code [link](https://github.com/Azure/azure-cli/blob/8adf97355a605d147afc26f6c1b6f6afb6651c2f/src/azure-cli/azure/cli/command_modules/keyvault/__init__.py)
 
-### [Azure CLI Extensions Project on github](https://github.com/Azure/azure-cli-extensions)
+Example, [az keyvault command was previously an extension in preview](https://github.com/Azure/azure-cli/blob/8adf97355a605d147afc26f6c1b6f6afb6651c2f/src/azure-cli/azure/cli/command_modules/keyvault/__init__.py)
 
+---
+
+# Explore some Azure CLI commands and extensions
+
+---
+
+# Your Turn to Explore Azure Cli 
+
+## Code-Walk Challenge!
+---
+
+# Q & A
 
 ---
 
@@ -139,6 +204,14 @@ Start writing!
 - **Let's learn and share what we learn as a community**
 
 ---
+
+# End Slides
+
+...Extra Stuff to Follow
+
+---
+
+Questions, 
 
 ---
 # Q&A
