@@ -1,10 +1,16 @@
-# AZ DEVOPS CODE WALK
-# Refer : https://docs.microsoft.com/en-us/azure/devops/cli/log-in-via-pat?view=azure-devops&tabs=windows
-# Shell is pwsh
+# AZ SQL CODE WALK
+
+## COMMANDS 
+### sql, configure
+
+## REFERENCES 
+### https://docs.microsoft.com/en-us/cli/azure/sql
+
+## GOALS (what objectives does this script accomplish)
+### GOAL 1: Use az configure to store defaults
+### GOAL 2: Stand up azure sql instance and database, populate and query it
 
 ## REQUIREMENTS: resource group
-
-## INSTALL azure-devops extension
 
 ## DEFINE VARIABLES
 $myRGName = 'demosql2'

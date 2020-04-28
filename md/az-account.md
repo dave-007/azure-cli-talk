@@ -7,7 +7,6 @@
 
 ### access token info https://mikhail.io/2019/07/how-azure-cli-manages-access-tokens/
 
-
 ```bash
 
 token=$(az account get-access-token | jq -r .accessToken)

@@ -14,7 +14,6 @@
 * [Using --query,  JMESPath Examples](azcli-jmespath-examples.md)
 * [az extensions](az-extensions.md)
 * [Using azure-devops Extension](azure-devops-extension-examples.md)
-* [Code Walk AZ SQL](code-walk-az-sql.md)
+* [Code Walk AZ SQL](az-sql.md)
 
 ## Challenge
-

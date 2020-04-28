@@ -1,0 +1,2 @@
+$m = az monitor activity-log list | ConvertFrom-JSON
+$m
