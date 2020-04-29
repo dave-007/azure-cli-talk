@@ -207,8 +207,6 @@ az extension add --source https://github.com/noelbundick/azure-cli-extension-noe
 
 ## [Microsoft Azure CLI Dev Tools (azdev) ](https://github.com/Azure/azure-cli-dev-tools)
 
-
-
 ---
 
 
