@@ -132,7 +132,7 @@ code --install-extension ms-vscode.azurecli
 
 ### But why use a web page when you can use Lawrence Gripper's [AzBrowse](https://github.com/lawrencegripper/azbrowse)?
 
-#### Add **az browse** command to azcli using [Noel Bundick's custom extension](https://github.com/noelbundick/azure-cli-extension-noelbundick)
+#### Add **az browse** command to azcli using Noel Bundick's [custom azcli extension](https://github.com/noelbundick/azure-cli-extension-noelbundick)
 
 ```
 az extension add --source https://github.com/noelbundick/azure-cli-extension-noelbundick/releases/download/v0.0.17/noelbundick-0.0.17-py3-none-any.whl
