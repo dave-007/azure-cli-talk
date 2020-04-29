@@ -34,7 +34,7 @@
 
 ## AZ Browse
 - [Getting Started](https://github.com/lawrencegripper/azbrowse/blob/master/docs/getting-started.md)
-- 
+  
 ## Azure CLI Previous Incarnation as XPlat CLI
 - [XPlat CLI on GitHub](https://github.com/Azure/azure-xplat-cli)
 - ArmClient [blog post](http://blog.davidebbo.com/2015/01/azure-resource-manager-client.html)
