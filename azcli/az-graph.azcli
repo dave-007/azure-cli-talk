@@ -5,13 +5,19 @@
 # https://duckduckgo.com/?q=az+cli+graph+query&atb=v206-1&ia=web
 
 # Azure Graph is accessible via rest calls
+# See what entities are available
 az rest --method get --uri "https://graph.microsoft.com/v1.0/"
 $r = az rest --method get --uri "https://graph.microsoft.com/v1.0/" | ConvertFrom-JSON
 $r.value | Out-GridView
 
-#try one of the queries
+#try one of the queries for domains
 $d = az rest --method get --uri "https://graph.microsoft.com/v1.0/domains" | ConvertFrom-JSON
 $d.value | Out-GridView
+
+#try one of the queries for users
+$d = az rest --method get --uri "https://graph.microsoft.com/v1.0/users" | ConvertFrom-JSON
+$d.value | Out-GridView
+
 
 
 # az graph cli command is not installed by default

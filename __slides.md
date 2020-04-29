@@ -8,7 +8,7 @@ _class: invert
 Start writing!
 ---
 
-<!-- todo: complete cit site --> 
+
 
 ---
 
@@ -47,7 +47,7 @@ Start writing!
 
 ---
 # Installing & Running AZCLI
-###  Azure CLI Is written in Python, so it's cross platform, runs in Windows, Linux, MacOS
+###  Azure CLI is written in Python, so it's cross platform, runs in Windows, Linux, MacOS
 ### Is open source under MIT License
 ### Has many ways to install ([docs](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)) 
 ### Works* on your choice of shell: bash, zsh, pwsh, etc...
@@ -144,8 +144,8 @@ az extension add --source https://github.com/noelbundick/azure-cli-extension-noe
 ## Azure CLI Basic Syntax & First Commands
 
 ### Arguments syntax
-
--  All params start with two hyphens (--help),most common arguments have a one hypen short format (-h)
+-  Start with az -h
+-  All params start with two hyphens (--help),most common arguments have a one hyphen short format (-h)
 -  After `az login`, start with `az group -h` to work with your resource groups and get familiar with Azure CLI syntax
 -  You can save work later by setting some smart defaults with `az configure`
 ---
@@ -186,8 +186,7 @@ az extension add --source https://github.com/noelbundick/azure-cli-extension-noe
 
 ## [jmespath-terminal / jpterm](https://github.com/jmespath/jmespath.terminal)
 
-## Why not PowerShell?
-
+## Why not PowerShell & ConvertFrom-JSON?
 
 ---
 

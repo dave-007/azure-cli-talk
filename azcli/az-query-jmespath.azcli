@@ -51,10 +51,11 @@ az group list --query "[?contains(location,'eastus2')]"
 az group list --query "[?contains(location,'eastus2')].{NAME:name, locationLabel:location}" -o table
 
 # works, only in bash?
-az account list-locations --query "[?contains(displayName,'US')] | \
-[].[displayName,name,latitude,longitude]" -o table
-
 az account list-locations --query "[?contains(displayName,'US')]"
+
+az account list-locations --query "[?contains(displayName,'US')] | \
+[].[displayName,name]" -o table
+
 
 # TEST next command from console
 az account list-locations | jpterm

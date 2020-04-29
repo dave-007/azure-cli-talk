@@ -16,10 +16,12 @@
 ## STEPS (comment each section along the way)
 az consumption usage -h
 az consumption usage list -h 
-$marchUsageJSON = az consumption usage list --start-date 2020-03-01 --end-date 2020-04-01 -m -a --top 1000 | ConvertFrom-JSON
+$marchUsageJSON = az consumption usage list --start-date 2020-03-01 --end-date 2020-04-01 -m -a --top 1000
 $marchUsage = $marchUsageJSON | ConvertFrom-JSON 
-$marchUsage | Select costCenter, ConsumedService, InstanceName, product, pretaxCost, usageQuantity |
+$marchUsage | Select costCenter, ConsumedService, InstanceName, product, pretaxCost, usageQuantity | 
   Out-GridView
+  
+
 
 
 ## CLEANUP

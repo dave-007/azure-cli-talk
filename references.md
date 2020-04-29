@@ -32,6 +32,9 @@
 - [Azure CLI PYPY project, release history](https://pypi.org/project/azure-cli/)
 - [Azure-SDK DevOps Project, pipelines are open to the public](https://dev.azure.com/azure-sdk/public/_build?view=folders&treeState=XHB5dGhvbiRccG93ZXJzaGVsbA%3D%3D)
 
+## AZ Browse
+- [Getting Started](https://github.com/lawrencegripper/azbrowse/blob/master/docs/getting-started.md)
+- 
 ## Azure CLI Previous Incarnation as XPlat CLI
 - [XPlat CLI on GitHub](https://github.com/Azure/azure-xplat-cli)
 - ArmClient [blog post](http://blog.davidebbo.com/2015/01/azure-resource-manager-client.html)
