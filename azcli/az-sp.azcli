@@ -1,9 +1,14 @@
-# Goals:
-# Create cert in keyvault
-# Create service principle
-# Grant service principle contrib on given resource group
-# Login as that service principle
-# Deploy ARM template to resource group
+## CODE WALK - TITLE
+## COMMANDS 
+
+## REFERENCES
+### https://medium.com/@mauridb/calling-azure-rest-api-via-curl-eb10a06127
+## Goals:
+### Create cert in keyvault
+### todo: Create service principle
+### Grant service principle contrib on given resource group
+### Login as that service principle
+### Deploy ARM template to resource group
 
 # REQUIREMENTS
 ## Login to Azure with rights to create 
@@ -25,3 +30,4 @@ $default_policy
 az keyvault certificate create -h
 # ran next line from cloud shell bash, get error from pwsh shell: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
 az keyvault certificate create --vault-name dckv -n azcli-sp-cert -p "$(az keyvault certificate get-default-policy)" --debug
+

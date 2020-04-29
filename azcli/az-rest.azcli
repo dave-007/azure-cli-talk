@@ -1,6 +1,8 @@
-# az rest
+## CODE WALK - TITLE
+## COMMANDS - az rest
 
-# Refer http://aka.ms/azurerest
+## REFERENCES 
+### http://aka.ms/azurerest
 # Discover urls with Azure Resource Explorer https://resources.azure.com/
 
 
@@ -9,8 +11,13 @@
 # use the az rest command to work against the Azure API directly
 az rest -h
 
-# example auditLogs, directoryAudits method
-$rjson = az rest --method get --uri https://graph.microsoft.com/beta/auditLogs/directoryAudits
-$r = $rjson | ConvertFrom-JSON
+# use az rest to get resource groups, uri pulled from https://resources.azure.com
+$uri = 'https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups?api-version=2014-04-01'
+$rjson = az rest --method get --uri $uri
+$rjson
 
-$r.value | Out-GridView 
+# use PowerShell to manage the JSON
+$rjson | ConvertFrom-JSON | Select -ExpandProperty value | Select name,location
+
+# compare to debug output
+az group list --debug

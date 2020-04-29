@@ -13,13 +13,20 @@
 
 ## GOALS (what objectives does this script accomplish)
 ### GOAL 1: Create a storage account, container and copy a file there
+### GOAL 2: use az configure for storage defaults
+
+#storage	connection_string	string	The default connection string to use for az storage commands.
+#account	string	The default account name to use for az storage commands.
+#key	string	The default account key to use for az storage commands.
+#sas_token	string	The default SAS token to use for az storage commands.
+
 
 ## REQUIREMENTS (what prerequisites?)
 ### Azure account
 ### azcopy 
 ### 
 
-## INSTALL (anything needed besides azcli, extensions, dependencies?)
+
 ## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
 
 $myLocation = 'eastus2'  
@@ -55,5 +62,8 @@ $skus.Value |
 
 # choose my sku
 $mySKU = 'Standard_LRS'
-az storage account create --name $myStorageAccountName  --sku $mySKU # --resource-group MyResourceGroup --location $myLocation
+az storage account create --name $myStorageAccountName  --sku $mySKU #leaving out args that are defaulted wit az configure --resource-group MyResourceGroup --location $myLocation
 ## CLEANUP
+
+# remove storage account
+az storage account remove -h

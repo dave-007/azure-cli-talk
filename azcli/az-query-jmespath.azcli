@@ -15,7 +15,7 @@
 Azure account
 JMESPath-terminal 
 
-## INSTALL (anything needed besides azcli, extensions, dependencies?)
+
 jpterm
 
 ## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)

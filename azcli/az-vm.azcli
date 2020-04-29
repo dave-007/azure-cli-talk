@@ -1,0 +1,86 @@
+## CODE WALK - AZ VM CREATE
+## COMMANDS - az vm create
+### (what are the primary commands used?)
+
+## REFERENCES 
+### (documentation)
+### https://docs.microsoft.com/en-us/azure/cli
+### https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys
+### vm sizes https://stackoverflow.com/questions/33880334/how-to-get-a-list-of-available-vm-sizes-in-an-azure-location
+
+## GOALS 
+### GOAL 1: create a linux vm , generating ssh key,using an existing network & subnet
+
+## REQUIREMENTS (what prerequisites?)
+# using pwsh 
+# ssh capability
+# view folder ssh keys will be stored 
+mkdir ~/.ssh
+cat ~/.ssh
+
+# choose VM size/sku
+#rely on az configure default location
+# todo smart filter this list
+az vm list-skus -o table
+az vm list-sizes -o table
+
+# choose image
+az vm image list -h
+
+# looking for ubuntu images
+# note --all takes a long time (~1m) refreshes local image cache
+# todo better filter
+az vm image list -f 'Ubuntu' -p 'Canonical'
+
+
+## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
+# $myRGName = 'azclitalk1' #using az configure default
+# $myLocation = 'eastus2' #using az configure default
+$myDnsPrefix = 'daveubuntu0'
+$myVNet = 'vnet0'
+$mySubnet = 'subnet0'
+
+$VMSize = 'Basic_A0' # smallest general purpose
+$myImageURN = 'UbuntuLTS' #ubuntu lts
+
+$myVMName = 'ubuntu0'
+
+## STEPS (comment each section along the way)
+
+
+# create VM and generate keys
+
+#lookup syntax
+az find 'generate-ssh-keys'
+az vm create -h
+
+#create vm, capture result in variable
+$result = az vm create --name $myVMName  --public-ip-address-dns-name $myDnsPrefix `
+    --image $myImageURN --data-disk-sizes-gb 10 --size $VMSize `
+    --generate-ssh-keys --vnet-name $myVNet --subnet $mySubnet --private-ip-address 10.0.0.100
+
+# if success, $result will hold the details of the VM
+$result 
+
+# get the fqdn of our new VM
+$fqdns = $result | ConvertFrom-JSON | Select -ExpandProperty fqdns
+$fqdns
+# test ssh access
+ssh $fqdns
+
+az vm stop -h
+# stopping the VM will not stop the charges
+# deallocate to save money and use it later
+az vm deallocate -h
+
+az vm deallocate --name $myVMName
+# start it back up
+az vm start --name $myVMName
+
+# review vm
+az vm show --name $myVMName
+
+
+## CLEANUP
+
+az vm -h

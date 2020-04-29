@@ -1,0 +1,27 @@
+## CODE WALK - AZ NETWORK
+## COMMANDS az network vnet create
+### 
+
+## REFERENCES 
+### (documentation)
+### https://docs.microsoft.com/en-us/azure/cli
+
+## GOALS (what objectives does this script accomplish)
+### GOAL 1: create network vnet and subnet
+
+## REQUIREMENTS (what prerequisites?)
+
+
+## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
+$myResourceGroup = 'azclitalk-rg'
+$myLocation = 'eastus2'
+## STEPS (comment each section along the way)
+# resource group, create if needed
+# az group create --name $myResourceGroup --location $myLocation
+
+# Create a virtual network with a specific address prefix and one subnet.
+  az network vnet create -g $myResourceGroup -n vnet0 --address-prefix 10.0.0.0/16 `
+      --subnet-name subnet0 --subnet-prefix 10.0.0.0/24 --debug
+## CLEANUP
+# remove network
+ az network vnet delete -h

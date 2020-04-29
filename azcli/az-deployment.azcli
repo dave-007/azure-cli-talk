@@ -1,0 +1,27 @@
+## CODE WALK - AZ DEPLOYMENT
+## COMMANDS 
+### az deployment
+
+## REFERENCES 
+### (documentation)
+### https://docs.microsoft.com/en-us/azure/cli
+### https://docs.microsoft.com/en-us/cli/azure/group/deployment
+### https://docs.microsoft.com/en-us/cli/azure/deployment/group
+## GOALS 
+### GOAL 1: Deploy ARM template to create VM, experimenting with parameters
+
+## REQUIREMENTS 
+
+
+## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
+## STEPS (comment each section along the way)
+## CLEANUP
+
+
+az group deplyoment create -h
+az group deployment create -g MyResourceGroup --template-file azuredeploy.json \
+    --parameters @params.json --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
+# or
+az deployment group create -h
+az deployment group create --resource-group testrg --name rollout01 --template-file azuredeploy.json  \
+    --parameters @params.json --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
