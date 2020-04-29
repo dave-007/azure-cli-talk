@@ -1,0 +1,26 @@
+## CODE WALK - AZ CONSUMPTION
+## COMMANDS 
+### (what are the primary commands used?)
+
+## REFERENCES 
+### (documentation)
+### https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest
+
+### https://docs.microsoft.com/en-us/cli/azure/consumption/usage?view=azure-cli-latest#az-consumption-usage-list
+## GOALS (what objectives does this script accomplish)
+### GOAL 1: Get last months azure charges by resource
+
+## REQUIREMENTS (what prerequisites?)
+
+## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
+## STEPS (comment each section along the way)
+az consumption usage -h
+az consumption usage list -h 
+$marchUsageJSON = az consumption usage list --start-date 2020-03-01 --end-date 2020-04-01 -m -a --top 1000 | ConvertFrom-JSON
+$marchUsage = $marchUsageJSON | ConvertFrom-JSON 
+$marchUsage | Select costCenter, ConsumedService, InstanceName, product, pretaxCost, usageQuantity |
+  Out-GridView
+
+
+## CLEANUP
+

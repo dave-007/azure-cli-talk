@@ -1,0 +1,27 @@
+## CODE WALK - TITLE
+## COMMANDS 
+### (what are the primary commands used?)
+
+## REFERENCES 
+### (documentation)
+### https://docs.microsoft.com/en-us/cli/azure/extension
+
+## GOALS
+### GOAL 1: Introduce the AZ CLI extensions functionality. These are analagous to modules in PowerShell. 
+### Implemented as Python Wheels
+
+## REQUIREMENTS 
+Azure account
+
+## DEFINE VARIABLES 
+## STEPS 
+
+# see extensions
+az extension list-available -o table
+
+# Out-GridView
+$extensions = az extension list-available | ConvertFrom-JSON
+$extensions | Out-GridView 
+
+## CLEANUP
+

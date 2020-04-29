@@ -13,10 +13,8 @@
 
 ## REQUIREMENTS (what prerequisites?)
 Azure account
-JMESPath-terminal 
-
-
-jpterm
+JMESPath-terminal / jpterm installed
+Bash or Cloudshell
 
 ## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
 ## STEPS (comment each section along the way)
@@ -30,14 +28,15 @@ az account show --query '[environmentName, user.name]'
 
 
 # query an array
-# get 1 property from that array, brackets
+# get 1 property from that array with brackets
 az group list --query '[].name'
 
 # get multiple properties from that array, use brackets and braces
 # this doesn't work, but it should
 az group list --query '[].{name, location}'
 # need to provide a label for each property in form label:property
-az group list --query '[].{NAME:name, locationLabelWhatever:location}'
+az group list --query '[].{NAME:name, locationLabel:location}'
+az group list --query '[].{NAME:name, locationLabel:location}' -o table
 
 
 # filter an array
@@ -49,12 +48,16 @@ az group list --query "[?location=='eastus2']"
 # should work, but doesn't, not sure why
 # doesn't work in pwsh/PowerShell, only works in bash
 az group list --query "[?contains(location,'eastus2')]"
+az group list --query "[?contains(location,'eastus2')].{NAME:name, locationLabel:location}" -o table
+
 # works, only in bash?
 az account list-locations --query "[?contains(displayName,'US')] | \
-[].[displayName,name,id]"
+[].[displayName,name,latitude,longitude]" -o table
 
 az account list-locations --query "[?contains(displayName,'US')]"
 
+# TEST next command from console
+az account list-locations | jpterm
 
 
 ## CLEANUP

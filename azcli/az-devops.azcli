@@ -29,7 +29,6 @@ az devops security group -h
 $g = az devops security group list --project $myProjectName | ConvertFrom-JSON
 $groupDescriptor = $g.graphGroups | Select-Object -ExpandProperty descriptor -First 1
 az devops security group show --id $groupDescriptor
-az devops security group show --id ($g | Select * -First 1)
 
 
 # review az devops user commands
