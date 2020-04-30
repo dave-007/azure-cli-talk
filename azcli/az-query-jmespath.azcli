@@ -47,7 +47,7 @@ az group list --query '[]'
 az group list --query "[?location=='eastus2']"
 # should work, but doesn't, not sure why
 # doesn't work in pwsh/PowerShell, only works in bash
-az group list --query "[?contains(location,'eastus2')]"
+az group list --query "[?contains(location,'east')]"
 az group list --query "[?contains(location,'eastus2')].{NAME:name, locationLabel:location}" -o table
 
 # works, only in bash?

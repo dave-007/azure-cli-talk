@@ -14,9 +14,10 @@
 
 ## REQUIREMENTS (what prerequisites?)
 Azure subscription
+Shell is pwsh
 
 ## DEFINE VARIABLES (user should only need to change these and use the rest of the script as is.)
-$myResourceGroup = 'azclitalk-rg'
+$myResourceGroup = 'mcsfug-azcli-rg' # should exist already
 $myLocation = 'eastus2'
 
 ## STEPS (comment each section along the way)
@@ -30,7 +31,16 @@ az configure -d "group=$myResourceGroup"
 # show new config settings
 az configure -l
 
+# test by creating a storage account without a location or resource group specified
+
+# random name : https://devblogs.microsoft.com/scripting/generate-random-letters-with-powershell/
+$randomname = -join ((97..122) | Get-Random -Count 10 | % {[char]$_})
+$sJSON = az storage account create -n "stor$randomname"
+$sObject = $sJSON | ConvertFrom-JSON
+$sObject.resourcegroup
+$sObject.location
 ## CLEANUP
+az storage account delete -n "stor$randomname"
 
 # to clear all your configuration defaults, set them each to empty string
 az configure --defaults location='' group=''
